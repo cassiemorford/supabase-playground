@@ -1,5 +1,5 @@
 import { createClient } from "@/utils/supabase/server";
-import TodoList from "./TodoList";
+import TodoList from "../components/TodoList";
 
 export default async function TodoItems() {
   const supabase = await createClient();

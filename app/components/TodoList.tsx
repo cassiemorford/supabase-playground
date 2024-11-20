@@ -1,6 +1,7 @@
 "use client";
 import { createClient } from "@supabase/supabase-js";
 import React, { useState } from "react";
+import TodoListItem from "./TodoListItem";
 
 interface Params {
   todoListItems: any[];
@@ -26,7 +27,22 @@ const TodoList = ({ todoListItems }: Params) => {
     )
     .subscribe();
 
-  return <pre>{JSON.stringify(listItems, null, 2)}</pre>;
+  return (
+    <>
+      <ul>
+        {listItems.map((item) => (
+          <li>
+            <TodoListItem item={item} />
+          </li>
+        ))}
+      </ul>
+      <input
+        className="border border-purple-50 m-1 p-1"
+        type="text"
+        placeholder="add new todo"
+      />
+    </>
+  );
 };
 
 export default TodoList;
