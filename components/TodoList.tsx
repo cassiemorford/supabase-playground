@@ -2,6 +2,7 @@
 import { createClient } from "@supabase/supabase-js";
 import React, { useState } from "react";
 import TodoListItem from "./TodoListItem";
+import TodoListInput from "./TodoListInput";
 
 interface Params {
   todoListItems: any[];
@@ -14,7 +15,7 @@ const TodoList = ({ todoListItems }: Params) => {
   const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!;
   const supabase = createClient(supabaseUrl, supabaseKey);
 
-  const channel = supabase
+  supabase
     .channel("changes")
     .on(
       "postgres_changes",
@@ -31,16 +32,12 @@ const TodoList = ({ todoListItems }: Params) => {
     <>
       <ul>
         {listItems.map((item) => (
-          <li>
+          <li key={item.id}>
             <TodoListItem item={item} />
           </li>
         ))}
       </ul>
-      <input
-        className="border border-purple-50 m-1 p-1"
-        type="text"
-        placeholder="add new todo"
-      />
+      <TodoListInput />
     </>
   );
 };

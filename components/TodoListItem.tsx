@@ -14,7 +14,7 @@ const TodoListItem = ({ item }: Params) => {
   const createdAtString = createdAt.toLocaleDateString();
   return (
     <div>
-      <input type="checkbox" className="mr-2" checked={true} />
+      <input type="checkbox" className="mr-2" />
       <span>{item.value}</span>
       <span className="text-blue-300 text-xs">{createdAtString}</span>
     </div>
