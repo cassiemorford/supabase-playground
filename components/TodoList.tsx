@@ -24,7 +24,9 @@ const TodoList = ({ todoListItems }: Params) => {
         schema: "public",
         table: "todo_items",
       },
-      (payload) => setListItems([...listItems, payload])
+      (payload) => {
+        setListItems([...listItems, payload.new]);
+      }
     )
     .subscribe();
 

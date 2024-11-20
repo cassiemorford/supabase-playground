@@ -15,7 +15,7 @@ const TodoListItem = ({ item }: Params) => {
   return (
     <div>
       <input type="checkbox" className="mr-2" />
-      <span>{item.value}</span>
+      <span className="mr-2">{item.value}</span>
       <span className="text-blue-300 text-xs">{createdAtString}</span>
     </div>
   );

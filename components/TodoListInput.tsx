@@ -14,7 +14,7 @@ const TodoListInput = () => {
       if (error) {
         console.error("Error inserting data:", error);
       } else {
-        console.log("Data inserted successfully:", data);
+        setInputValue("");
       }
     } catch (error) {
       console.error("Unexpected error:", error);
@@ -22,7 +22,6 @@ const TodoListInput = () => {
   };
 
   const handleKeyDown: React.KeyboardEventHandler<HTMLInputElement> = (ev) => {
-    console.log(ev.key);
     if (ev.key === "Enter") {
       createTodo();
     }
