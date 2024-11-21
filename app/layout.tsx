@@ -27,20 +27,24 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <main className="min-h-screen flex flex-col items-center">
-            <div className="flex-1 w-full flex flex-col gap-20 items-center">
-              <div className="flex flex-col gap-20 max-w-5xl p-5">
-                <nav className="flex gap-20 max-w-8xl p-5">
-                  Cassie Morford
-                  <ul>
-                    <Link href="/">Home</Link>
-                    <Link href="/todos">Todos</Link>
-                  </ul>
-                </nav>
-                {children}
+          <main className="min-h-screen flex flex-col items-center h-screen">
+            <div className="flex-1 w-full flex flex-col p-10 items-center">
+              <div className="relative w-10/12 max-w-5x h-5/6">
+                <div className="absolute -inset-2 rounded-lg bg-gradient-to-r from-indigo-600 via-emerald-600 to-sky-600 opacity-75 blur"></div>
+                <div className="relative flex-col items-center justify-center rounded-lg bg-slate-900 h-full overflow-y-hidden">
+                  <div className="flex flex-col gap-6 justify-between w-full">
+                    <nav className="flex gap-20 p-5 justify-between border-b-4 border-emerald-950 z-10 bg-slate-900">
+                      <span className="text-2xl">Cassie Morford</span>
+                      <ul className="flex gap-10 align-middle ">
+                        <Link href="/">Home</Link>
+                        <Link href="/todos">Todos</Link>
+                        <Link href="/tailwind">Tailwind</Link>
+                      </ul>
+                    </nav>
+                    {children}
+                  </div>
+                </div>
               </div>
-
-              <footer className="w-full flex items-center justify-center border-t mx-auto text-center text-xs gap-8 py-16"></footer>
             </div>
           </main>
         </ThemeProvider>
