@@ -12,8 +12,8 @@ const NotFound = () => {
         objectPosition="center"
         alt="a small black and white dog squinting while standing on the edge of the grand canyon"
       />
-      <div className="relative z-10 opacity-80 text-slate-200 flex flex-col justify-around p-4 rounded-3xl bg-slate-800">
-        <div className="w-fit  text-9xl ">404</div>
+      <div className="relative z-10 opacity-80 text-slate-200 p-4 rounded-3xl bg-slate-800">
+        <div className="w-fit text-9xl">404</div>
       </div>
       <div className="w-fit relative"></div>
     </div>
