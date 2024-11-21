@@ -36,7 +36,7 @@ const TodoListInput = () => {
       value={inputValue}
       onChange={(e) => handleOnChange(e)}
       onKeyDown={(e) => handleKeyDown(e)}
-      className="border border-purple-50 m-1 p-1"
+      className="border border-purple-50 m-1 p-1 text-slate-200"
       type="text"
       placeholder="add new todo"
     />

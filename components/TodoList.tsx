@@ -31,7 +31,7 @@ const TodoList = ({ todoListItems }: Params) => {
     .subscribe();
 
   return (
-    <>
+    <div className="p-8">
       <ul>
         {listItems.map((item) => (
           <li key={item.id}>
@@ -40,7 +40,7 @@ const TodoList = ({ todoListItems }: Params) => {
         ))}
       </ul>
       <TodoListInput />
-    </>
+    </div>
   );
 };
 

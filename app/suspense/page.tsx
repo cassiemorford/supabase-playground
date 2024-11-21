@@ -3,7 +3,7 @@ import React, { Suspense } from "react";
 
 const SuspenseDemo = () => {
   return (
-    <div className="text-slate-50">
+    <div className="text-slate-50 p-4">
       <div> static content </div>
       <Suspense fallback={<div> i'm loading...</div>}>
         <SlowLoader />

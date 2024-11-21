@@ -33,7 +33,7 @@ export default function RootLayout({
                 <div className="absolute -inset-2 rounded-lg bg-gradient-to-r from-indigo-600 via-emerald-600 to-sky-600 opacity-75 blur"></div>
                 <div className="relative flex-col items-center justify-center rounded-lg bg-slate-900 h-full overflow-y-hidden">
                   <div className="flex flex-col gap-6 justify-between w-full">
-                    <nav className="flex gap-20 p-5 justify-between border-b-4 border-emerald-950 z-10 bg-slate-900">
+                    <nav className="flex gap-20 p-5 justify-between border-b-4 text-slate-200 border-emerald-950 z-10 bg-slate-900">
                       <span className="text-2xl">Cassie Morford</span>
                       <ul className="flex gap-10 align-middle ">
                         <Link href="/">Home</Link>
